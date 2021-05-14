@@ -16,6 +16,7 @@ But our solution is incomplete: we have only made this available for a single re
 ## How to run
 Having the typical rails dependencies installed you simply need to clone the project and run
 
+> rails db:migrate
 > rails s
 
 You don’t need to run the migrations or anything else as we have a sqlite database inside the repo itself

@@ -9,25 +9,25 @@
 			"name": "Authors",
 			"item": [
 				{
-					"name": "GET Authors",
+					"name": "GET Users",
 					"request": {
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "localhost:3000/authors",
+							"raw": "localhost:3000/users",
 							"host": [
 								"localhost"
 							],
 							"port": "3000",
 							"path": [
-								"authors"
+								"users"
 							]
 						}
 					},
 					"response": []
 				},
 				{
-					"name": "POST Author",
+					"name": "POST User",
 					"request": {
 						"method": "POST",
 						"header": [],
@@ -41,13 +41,13 @@
 							}
 						},
 						"url": {
-							"raw": "localhost:3000/authors",
+							"raw": "localhost:3000/users",
 							"host": [
 								"localhost"
 							],
 							"port": "3000",
 							"path": [
-								"authors"
+								"users"
 							]
 						}
 					},
