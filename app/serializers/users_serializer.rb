@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-class AuthorsSerializer < BaseSerializer
+class UsersSerializer < BaseSerializer
   private
 
   def data

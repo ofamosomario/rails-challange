@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-module Authors
+module Users
   class CollectionFetcher < BaseCollectionFetcher
     def initialize
     end
@@ -8,7 +8,7 @@ module Authors
     private
 
     def resources
-      Author.all
+      User.all
     end
 
     def post_create_hook(resource)

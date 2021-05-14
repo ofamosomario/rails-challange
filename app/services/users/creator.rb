@@ -1,11 +1,11 @@
 # frozen_string_literal: true
 
-module Authors
+module Users
   class Creator < BaseCreator
     private
 
     def build_resource
-      Author.create(attributes)
+      User.create(attributes)
     end
 
     def post_create_hook(resource)
