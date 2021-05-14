@@ -10,6 +10,8 @@ But our solution is incomplete: we have only made this available for a single re
     - For GET /users/:id (show method) we also want to return the created_at date time.
   1. Add one more resource: Loan, implement it’s CRUD using the same architecture
     - Create some relationship between User and Loan
+  1. Improve/write tests
+    - We only did a simple test for the model and none for the request itself. Can you improve this for us? Fell free to add and configure any library
 
 ## How to run
 Having the typical rails dependencies installed you simply need to clone the project and run
