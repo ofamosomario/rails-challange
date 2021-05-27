@@ -22,4 +22,22 @@ module CrudServices
       attributes: create_params
     )
   end
+
+  def updater
+    self.class.crud_module::Updater.new(
+      attributes: params
+    )
+  end
+
+  def unity
+    self.class.crud_module::Unity.new(
+      id: params[:id]
+    )
+  end
+
+  def destroyer
+    self.class.crud_module::Destroyer.new(
+      id: params[:id]
+    )
+  end
 end

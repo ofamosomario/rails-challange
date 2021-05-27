@@ -1,0 +1,177 @@
+swagger: '2.0'
+info:
+  title: Challange Rails Test - Mário A.
+  version: v1
+
+paths:
+  /users/{id}:
+    get:
+      summary: Show an unique user with loans
+      tags:
+        - users
+      consumes:
+        - application/json
+        - application/xml
+      parameters:
+        - name: id
+          in: path
+          schema:
+            type: object
+            properties:
+              id:
+                type: integer
+            required:
+              - id
+      responses:
+        '200':
+          description: ok  
+  /users:
+    get:
+      summary: Show list of users without loans
+      tags:
+        - users
+      consumes:
+        - application/json
+        - application/xml
+      responses:
+        '200':
+          description: ok  
+    post:
+      summary: Create an user
+      tags:
+        - users
+      consumes:
+        - application/json
+        - application/xml
+      parameters:
+        - name: user
+          in: body
+          schema:
+            type: object
+            properties:
+              name:
+                type: string
+            required:
+              - name
+      responses:
+        '200':
+          description: user created
+    put:
+      summary: Update an user
+      tags:
+        - users
+      consumes:
+        - application/json
+        - application/xml
+      parameters:
+        - name: user
+          in: body
+          schema:
+            type: object
+            properties:
+              id:
+                type: integer
+              name:
+                type: string
+            required:
+              - name
+      responses:
+        '200':
+          description: user updated
+    delete:
+      summary: Delete an user
+      tags:
+        - users
+      consumes:
+        - application/json
+        - application/xml
+      parameters:
+        - name: user
+          in: body
+          schema:
+            type: object
+            properties:
+              id:
+                type: integer
+      responses:
+        '200':
+          description: user deleted
+  /users/1/loans:
+    get:
+      summary: Show list of loans
+      tags:
+        - loans
+      consumes:
+        - application/json
+        - application/xml
+      responses:
+        '200':
+          description: ok  
+    post:
+      summary: Create an loan
+      tags:
+        - loans
+      consumes:
+        - application/json
+        - application/xml
+      parameters:
+        - name: loan
+          in: body
+          schema:
+            type: object
+            properties:
+              user_id:
+                type: integer
+              title:
+                type: string
+              active:
+                type: boolean
+            required:
+              - title
+              - active
+      responses:
+        '200':
+          description: loan created
+    put:
+      summary: Update an loan
+      tags:
+        - loans
+      consumes:
+        - application/json
+        - application/xml
+      parameters:
+        - name: loan
+          in: body
+          schema:
+            type: object
+            properties:
+              user_id:
+                type: integer
+              title:
+                type: string
+              active:
+                type: boolean
+            required:
+              - title
+              - active
+      responses:
+        '200':
+          description: loan updated
+    delete:
+      summary: Delete an loan
+      tags:
+        - loans
+      consumes:
+        - application/json
+        - application/xml
+      parameters:
+        - name: loan
+          in: body
+          schema:
+            type: object
+            properties:
+              id:
+                type: integer
+      responses:
+        '200':
+          description: loan deleted

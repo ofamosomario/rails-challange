@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-class EntitySerializer
+class EntitySerializer < BaseSerializer
   def initialize(object, key:, serializer:)
     @object = object
     @key = key

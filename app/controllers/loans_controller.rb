@@ -1,25 +1,25 @@
 # frozen_string_literal: true
 
-class UsersController < ApplicationController
+class LoansController < ApplicationController
   include CrudServices
-  crud_services Users
+  crud_services Loans
 
   def index
     render_collection collection_fetcher.call,
-      key: 'users',
-      serializer: UsersSerializer
+      key: 'loans',
+      serializer: LoansSerializer
   end
   
   def show
     render_unity unity.call,
-    key: 'users',
-    serializer: ShowUserSerializer
+    key: 'loans',
+    serializer: LoansSerializer
   end
   
   def create
     render_resource creator.call,
-      key: 'user',
-      serializer: UsersSerializer,
+      key: 'loans',
+      serializer: LoansSerializer,
       status: :created
   end
 
@@ -30,22 +30,15 @@ class UsersController < ApplicationController
       status: :created
   end
 
-  def update
-    render_resource updater.call,
-      key: 'user',
-      serializer: UserUpdatedSerializer,
-      status: :created
-  end
-
   def destroy
     render_destroy destroyer.call,
-    key: 'users',
+    key: 'loans',
     serializer: DestroySerializer
   end
 
   def create_params
-    params.require(:user).permit(
-      :name
+    params.require(:loan).permit(
+      :title, :active, :user_id
     )
   end
 end

@@ -31,4 +31,20 @@ module ApiRenderers
       serializer: serializer
     ).call, status: status
   end
+
+  def render_unity(resource, key:, serializer:)
+    render json: EntitySerializer.new(
+      resource,
+      key: key,
+      serializer: serializer
+    ).call
+  end
+
+  def render_destroy(resource, key:, serializer:)
+    render json: EntitySerializer.new(
+      resource,
+      key: key,
+      serializer: serializer
+    ).call
+  end
 end
