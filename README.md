@@ -17,7 +17,7 @@ We only did a simple test for the model and none for the request itself. Can you
 > SQL-LITE
 
 # Executing the app:
-> Go to repository [https://github.com/ofamosomario/rails-challange])(https://github.com/ofamosomario/rails-challange) and clone the project.
+> Go to repository [https://github.com/ofamosomario/rails-challange](https://github.com/ofamosomario/rails-challange) and clone the project.
 
 > rake db:create db:migrate db:seed
 
