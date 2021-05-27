@@ -14,7 +14,7 @@ We only did a simple test for the model and none for the request itself. Can you
 > Rails: Rails 6.1.3.2
 
 # Database:
-> PostegreSQL
+> SQL-LITE
 
 # Executing the app:
 > Go to repository ([https://github.com/ofamosomario/rails-challange])(https://github.com/ofamosomario/attensi) and clone the project.
